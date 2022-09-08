@@ -34,20 +34,20 @@ gpt Partitionstabelle erstellen
 
 	lsblk
 
-### Partitionsformat		# /dev/sda* ja nach HDD-Typ unterschiedlich
-#### EFI Format FAT 32
-	mkfs.fat -F32 /dev/sda1 # /dev/nvme0n1p1 #bei NVME-SSD'S
-#### SWAP Format
-	mkswap /dev/sda2 	# /dev/nvme0n1p2 #bei NVME-SSD'S
-#### SWAP aktivieren
-	swapon /dev/sda2	# /dev/nvme0n1p2 #bei NVME-SSD'S
-#### Root Format ext4
-	mkfs.ext4 /dev/sda3	# /dev/nvme0n1p3 #bei NVME-SSD'S
-#### Home Format ext4
-	mkfs.ext4 /dev/sda4	# /dev/nvme0n1p4 #bei NVME-SSD'S
+### Partitionsformat
+Achtung:
+/dev/sda* ja nach HDD-Typ unterschiedlich
+/dev/nvme0n1p1 #bei NVME-SSD'S
+
+	mkfs.fat -F32 /dev/sda1 # EFI Fromat Fat32
+	mkswap /dev/sda2 	# Swap Format
+	swapon /dev/sda2	# Swap aktivieren
+	mkfs.ext4 /dev/sda3	# Root-Format ext4
+	mkfs.ext4 /dev/sda4	# Home-Format ext4
+
 ### Festplaatenbelegung überprüfen	
 	lsblk
- ![Bild über die Aufteilung des Datenträgers](Bilder/lsblk-Festplattenaufteilung.png) 
+	![Bild über die Aufteilung des Datenträgers](Bilder/lsblk-Festplattenaufteilung.png) 
 
 ### Mountpunkte anlegen
 	mount /dev/sda3 /mnt		# /dev/nvme0n1p3
