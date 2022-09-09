@@ -62,7 +62,7 @@ Achtung:
 ### File-Systemtable generieren
 	genfstab -U /mnt >> /mnt/etc/fstab
 	cat /mnt/etc/fstab
-![Bild über Partitionierung und Mountpunkte](fstab-Filesystemtable.png)
+![Bild über Partitionierung und Mountpunkte](Bilder/fstab-Filesystemtable.png)
 
 ### Root User in neuer Installation wechseln
 	arch-chroot /mnt
@@ -109,7 +109,7 @@ Achtung:
 	useradd -mG wheel <USER-Name> #Benutzernamen eingeben
 	visudo
 
-!["%wheel ALL=(ALL)ALL" in Zeile 88 auskommentieren](NeuenUserAnlegen.png)
+!["%wheel ALL=(ALL)ALL" in Zeile 88 auskommentieren](Bilder/NeuenUserAnlegen.png)
 
 	passwd <USER-Name>
 
